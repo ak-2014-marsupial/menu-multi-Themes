@@ -1,0 +1,123 @@
+.header {
+    /*position: fixed;*/
+    position: sticky;
+    left: 0;
+    top: 0vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 2em;
+    height: 10vh;
+    background-color:var(--background) ;
+
+    box-shadow: 0 4px 4px -4px var(--text-secondary);
+    color: var(--text-primary);
+
+
+
+}
+
+.header__logo {
+    font-size: 2em;
+    line-height: 1;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.header__nav {
+    /*margin-left: auto;*/
+
+}
+
+.header__nav_list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+}
+
+.header__nav_item {
+    font-size: 1.4em;
+    line-height: 1;
+    color: var(--text-secondary);
+}
+
+.header__nav_item:nth-child(n+2) {
+    margin-left: 0.7em;
+}
+.header__btn{
+    display: none;
+}
+
+@media (max-width: 550px) {
+    .header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+    }
+    .header__nav_list{
+        margin-top: 5em;
+    }
+
+    .header__nav {
+
+        position: fixed;
+        top: 0;
+        left: -310px;
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        height: 100%;
+        background-color: var(--background);
+        border: 2px solid var(--border);
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+        box-shadow: 0 0 4px 4px var(--shadow);
+        transition: transform 0.7s linear;
+
+    }
+    .header__nav_active{
+        transform: translateX(100%);
+    }
+
+    .header__nav_list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .header__nav_item {
+        margin: 0.5em 0;
+        font-weight: 500;
+        z-index: 10;
+        color: var(--text-secondary);
+    }
+
+    .header__nav_item:nth-child(n+2) {
+        margin-left: 0;
+    }
+    .header__btn{
+        display: block;
+        /*margin-left: auto;*/
+        background-color: transparent;
+        padding: 0.4em;
+        border: 1px solid var(--border);
+        border-radius: 0.8em;
+        cursor: pointer;
+
+        position: absolute;
+        top: 2vh;
+        right: 2em;
+
+
+
+    }
+    .header__btn:hover{
+        box-shadow: 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover), 0 0 10px var(--accent-hover),  0 0 10px var(--accent-hover) ;
+
+    }
+
+}
+
