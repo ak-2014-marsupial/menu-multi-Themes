@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/menu-multi-themes/static/css/main.794d79e8.css",
+    "main.js": "/menu-multi-themes/static/js/main.443edd43.js",
+    "index.html": "/menu-multi-themes/index.html",
+    "main.794d79e8.css.map": "/menu-multi-themes/static/css/main.794d79e8.css.map",
+    "main.443edd43.js.map": "/menu-multi-themes/static/js/main.443edd43.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.794d79e8.css",
+    "static/js/main.443edd43.js"
+  ]
+}
