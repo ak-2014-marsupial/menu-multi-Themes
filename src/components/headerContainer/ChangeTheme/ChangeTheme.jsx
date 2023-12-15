@@ -25,9 +25,7 @@ const ChangeTheme = () => {
 
     return (
         <>
-            {/*<div className={css.dropdown}> Theme*/}
-            <div className={[css.dropdown,css.title].join(" ")}>set Theme
-                <button className={css.btn} style={{background: `${themeColor}`,borderRadius:"0.5em"}}></button>
+            <div className={css.dropdown}>Theme
 
             <div className={css.dropdown_content}>
                 {themeList.map(item =>

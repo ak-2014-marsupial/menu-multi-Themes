@@ -5,29 +5,16 @@
 .dropdown_content{
     display: none;
     position: absolute;
-    top: 3em;
     z-index: 1;
 }
 .dropdown:hover .dropdown_content{
-    display: flex;
     background-color:beige;
     display: block;
     padding: 0.3em;
     border: 1px solid var(--border);
-    border-radius: 0.5em;
+    border-radius:  0 0 0.5em 0.5em;
 }
 
-.title{
-    font-size: 0.8em;
-    padding: 0.2em;
-    display: flex;
-    flex-direction: column;
-    background-color: beige;
-    color: black;
-    border: 1px solid var(--border);
-    border-radius: 0.5em;
-
-}
 .btn{
     border:1px solid var(--star-primary);
     border-radius: 50%;
