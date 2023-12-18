@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
 
 import css from "./Header.module.css";
 import {ChangeTheme} from "../ChangeTheme";
+import {Burger} from "../../Burger";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -42,21 +42,19 @@ const Header = () => {
 
     return (
         <header className={css.header}>
-            <span className={css.header__logo}>Logo</span>
-            {/*{isOpen?[css.header__nav,css.header__nav_active].join(" "): css.header__nav}*/}
-            <nav className={isOpen ? [css.header__nav, css.header__nav_active].join(" ") : css.header__nav}>
-                <ul className={css.header__nav_list}>
-                    <li className={css.header__nav_item}>Main</li>
-                    <li className={css.header__nav_item}>About</li>
-                    <li className={css.header__nav_item}>Address</li>
-                    <li className={css.header__nav_item}>Login</li>
-                    <li className={css.header__nav_item}><ChangeTheme/></li>
+            <span className={css.logo}>Logo</span>
+            <nav className={isOpen ? [css.nav, css.nav_active].join(" ") : css.nav}>
+                <ul className={css.nav_list}>
+                    <li className={css.nav_item}>Main</li>
+                    <li className={css.nav_item}>About</li>
+                    <li className={css.nav_item}>Address</li>
+                    <li className={css.nav_item}>Login</li>
+                    <li className={css.nav_item}><ChangeTheme/></li>
                 </ul>
             </nav>
-            <button className={css.header__btn} onClick={() => setIsOpen(!isOpen)}>
-                {isOpen ? <AiOutlineClose size={25} color={"var(--border)"}/> :
-                    <AiOutlineMenu size={25} color={"var(--border)"}/>}
-            </button>
+            <div className={css.burger}>
+                <Burger isOpen={isOpen} setIsOpen={setIsOpen}/>
+            </div>
         </header>
     );
 };
